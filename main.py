@@ -1,10 +1,11 @@
-import string
 from HashTable import HashTable
-
+from utils.load_words import load_words
 from hashes.word_hash import one_letter_hash
 
-table = HashTable(26)
-for letter in string.ascii_lowercase:
-    table.insert(letter, one_letter_hash)
+words = load_words("words.txt")
 
-print(table)
+table = HashTable(26, one_letter_hash)
+for word in words:
+    table.insert(word)
+
+table.show_table_distribution()
