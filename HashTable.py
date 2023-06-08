@@ -3,7 +3,6 @@ from statistics import stdev
 from utils.init_table import init_table
 from utils.save_table import save_table
 
-
 class HashTable:
     """
     Classe que representa uma Tabela Hash.
@@ -17,7 +16,7 @@ class HashTable:
         self.size = size
         self.hash_func = hash_func
 
-    def inserir_palavra(self, palavra: str):
+    def insert_word(self, word: str):
         """
         Insere uma palavra na tabela.
 
@@ -27,11 +26,11 @@ class HashTable:
         Para indexar a palavra na tabela, usamos o resto
         da divisão desse valor pelo tamanho da tabela.
         """
-        hash_code = self.hash_func(palavra) % self.size
+        hash_code = self.hash_func(word) % self.size
 
-        self.table[hash_code].append(palavra)
+        self.table[hash_code].append(word)
 
-    def exibir_informacoes(self):
+    def display_information(self):
         """
         Exibe dados da tabela, incluindo:
             - Tamanho
@@ -43,6 +42,7 @@ class HashTable:
         desvio_padrao = stdev(qtde_palavras_por_lista)
 
         print(f"Tabela de {self.size} posições.")
-        print(f"Desvio padrão: {desvio_padrao}.")
+        print(f"Função Hash: {self.hash_func.__name__}")
+        print(f"Desvio padrão: {desvio_padrao}")
 
         save_table(self.table, name_hash=self.hash_func.__name__)
