@@ -1,8 +1,8 @@
-from math import sqrt
-from statistics import mean
+from statistics import stdev
 
 from utils.init_table import init_table
 from utils.save_table import save_table
+
 
 class HashTable:
     """
@@ -35,31 +35,14 @@ class HashTable:
         """
         Exibe dados da tabela, incluindo:
             - Tamanho
-            - Desvio padrão das palavras
+            - Desvio padrão do nº de palavras por posição
+        
+        Os dados da tabela são salvos em arquivo de texto
         """
+        qtde_palavras_por_lista = [len(linha) for linha in self.table.values()]
+        desvio_padrao = stdev(qtde_palavras_por_lista)
+
         print(f"Tabela de {self.size} posições.")
-        print(f"Desvio padrão: {self.calcular_desvio_padrao()}.")
+        print(f"Desvio padrão: {desvio_padrao}.")
 
-        save_table(self.table, self.hash_func.__name__)
-
-    def calcular_desvio_padrao(self):
-        """
-        Calcula o desvio padrão da tabela.
-
-        O objetivo é visualizar o qual bem uniformemente
-        as palavras foram distribuídas pela tabela. Quanto
-        mais próximo de 0 for o desvio, melhor a distribuição.
-        """
-
-        # Calcula a média de palavras por lista
-        listas_palavras = self.table.values()
-        media_palavras_por_lista = mean([len(lista) for lista in listas_palavras])
-
-        # Calcula o desvio padrão
-        somatorio = 0
-        for lista in listas_palavras:
-            somatorio += (len(lista) - media_palavras_por_lista) ** 2
-
-        desvio = sqrt(somatorio / len(listas_palavras))
-
-        return desvio
+        save_table(self.table, name_hash=self.hash_func.__name__)

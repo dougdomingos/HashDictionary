@@ -1,13 +1,14 @@
-[ 0]   380 palavras
-[ 1]   368 palavras
-[ 2]   365 palavras
-[ 3]   398 palavras
-[ 4]   391 palavras
-[ 5]   416 palavras
-[ 6]   380 palavras
-[ 7]   380 palavras
-[ 8]   395 palavras
-[ 9]   383 palavras
+Função Hash: prime_hash
+[00]   380 palavras
+[01]   368 palavras
+[02]   365 palavras
+[03]   398 palavras
+[04]   391 palavras
+[05]   416 palavras
+[06]   380 palavras
+[07]   380 palavras
+[08]   395 palavras
+[09]   383 palavras
 [10]   411 palavras
 [11]   381 palavras
 [12]   388 palavras

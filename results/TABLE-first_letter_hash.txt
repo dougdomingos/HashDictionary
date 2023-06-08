@@ -1,13 +1,14 @@
-[ 0]   334 palavras
-[ 1]   386 palavras
-[ 2]   127 palavras
-[ 3]    98 palavras
-[ 4]   372 palavras
-[ 5]   555 palavras
-[ 6]   231 palavras
-[ 7]   226 palavras
-[ 8]   792 palavras
-[ 9]    46 palavras
+Função Hash: first_letter_hash
+[00]   334 palavras
+[01]   386 palavras
+[02]   127 palavras
+[03]    98 palavras
+[04]   372 palavras
+[05]   555 palavras
+[06]   231 palavras
+[07]   226 palavras
+[08]   792 palavras
+[09]    46 palavras
 [10]   581 palavras
 [11]  1005 palavras
 [12]   549 palavras
